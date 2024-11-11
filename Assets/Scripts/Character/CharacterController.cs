@@ -23,13 +23,13 @@ public class CharacterController : MonoBehaviour
         _animator.SetBool("isRunning", true);
     }
 
-    public void OnAttack()
+    public void OnFaceEnemy()
     {
+        if (_animator.GetBool("isRunning") == true)
+        {
+            _animator.SetBool("isRunning", false);   
+        }
 
-    }
-
-    public void OnDamaged()
-    {
         
     }
 }

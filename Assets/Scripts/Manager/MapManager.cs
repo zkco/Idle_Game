@@ -26,14 +26,6 @@ public class MapManager : Singleton<MapManager>
         }
     }
 
-    private void Start()
-    {
-        for (int i = 0; i < size; i++)
-        {
-            MakeChunk();
-        }
-    }
-
     private void Update()
     {
         if (Party.position.z > _nextChunkPosition.z - 60f)
