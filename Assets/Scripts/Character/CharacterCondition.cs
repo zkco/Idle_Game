@@ -4,10 +4,11 @@ using UnityEngine.UI;
 
 public class CharacterCondition : MonoBehaviour
 {
-    public GameObject HP;
-    public GameObject MP;
-    public GameObject EXP;
+    public Condition Hp;
+    public Condition Mp;
+    public Condition Exp;
 
     public TextMeshProUGUI Gold;
+
 
 }
