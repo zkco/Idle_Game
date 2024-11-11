@@ -8,6 +8,7 @@ public class MapManager : Singleton<MapManager>
     public Queue<GameObject> Chunks;
     public GameObject block;
     public Transform parent;
+    public Transform Party;
     private Vector3 _nextChunkPosition;
     public int ChunkLevel;
     public int size;
@@ -35,7 +36,10 @@ public class MapManager : Singleton<MapManager>
 
     private void Update()
     {
-        //TODO : 카메라 포지션에 맞춰 청크 생성
+        if (Party.position.z > _nextChunkPosition.z - 60f)
+        {
+            MakeChunk();
+        }
     }
 
     private void MakeChunk()

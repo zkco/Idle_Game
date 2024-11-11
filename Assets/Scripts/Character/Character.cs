@@ -1,11 +1,15 @@
 using UnityEngine;
 
-public abstract class Character : MonoBehaviour
+public class Character : MonoBehaviour
 {
-    public abstract string Name { get; }
-    public abstract string Description { get; }
+    public string Name { get; }
+    public string Description { get; }
 
     public AttackData attackData;
 
-    public abstract void Attack(AttackData attackData);
+    public void Attack(AttackData attackData)
+    {
+
+    }
+
 }
