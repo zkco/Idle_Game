@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -30,6 +31,11 @@ public class MapManager : Singleton<MapManager>
         {
             MakeChunk();
         }
+    }
+
+    private void Update()
+    {
+        //TODO : 카메라 포지션에 맞춰 청크 생성
     }
 
     private void MakeChunk()
