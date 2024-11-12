@@ -1640,8 +1640,8 @@ GameObject:
   - component: {fileID: 867440032}
   - component: {fileID: 867440031}
   - component: {fileID: 867440034}
-  - component: {fileID: 867440035}
   - component: {fileID: 867440036}
+  - component: {fileID: 867440037}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1694,18 +1694,6 @@ MonoBehaviour:
   Party: {fileID: 1080308352}
   Stage: 0
   size: 20
---- !u!114 &867440035
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 867440030}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aacaee4d9fcad4c4c8cdcfe9eb1d6d83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &867440036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1723,6 +1711,20 @@ MonoBehaviour:
   - {fileID: 4574192825567932450, guid: 88716498407968c4abc511b0e063fb77, type: 3}
   - {fileID: 474825259339910810, guid: cfdaf9009eaf6284bb2e89504bc24020, type: 3}
   EnemySpawnPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &867440037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867440030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19434dff39f6fbb489057d94979b809c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Inventory: {fileID: 0}
+  itemDatas: []
 --- !u!1001 &918829892
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11524,6 +11526,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Condition: {fileID: 0}
   Controller: {fileID: 0}
+  TotalStatus: 0
 --- !u!1001 &8019525400381569575
 PrefabInstance:
   m_ObjectHideFlags: 0

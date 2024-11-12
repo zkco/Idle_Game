@@ -10,6 +10,14 @@ public class Slot : MonoBehaviour
 
     private void Awake()
     {
-        EquipIcon.gameObject.SetActive(false);
+        if (Item == null)
+        {
+            EquipText.gameObject.SetActive(false);
+        }
+        else
+        {
+            EquipText.gameObject.SetActive(Item.IsEquiped);
+        }
+        EquipIcon.gameObject.SetActive(Item != null);
     }
 }
