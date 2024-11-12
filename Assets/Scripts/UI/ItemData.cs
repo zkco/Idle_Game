@@ -22,8 +22,8 @@ public class ItemData : ScriptableObject
     public string Name;
     public string Description;
     public Image SlotImage;
-    Rairity Rairity;
-    EquipSlot EquipSlot;
+    public Rairity Rairity;
+    public EquipSlot EquipSlot;
     public int Damage;
     public int Defense;
     public int Price;
