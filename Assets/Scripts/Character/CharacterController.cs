@@ -29,7 +29,5 @@ public class CharacterController : MonoBehaviour
         {
             _animator.SetBool("isRunning", false);   
         }
-
-        
     }
 }

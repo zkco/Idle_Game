@@ -10,7 +10,7 @@ public class MapManager : Singleton<MapManager>
     public Transform parent;
     public Transform Party;
     private Vector3 _nextChunkPosition;
-    public int ChunkLevel;
+    public int Stage;
     public int size;
 
 

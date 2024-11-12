@@ -1,7 +1,10 @@
+using System.Collections.Generic;
 using UnityEngine;
 
-public class Character : MonoBehaviour, IAttackable
+public class Enemy : MonoBehaviour, IAttackable
 {
+    public List<Item> DropTable;
+
     public void OnAttack()
     {
         throw new System.NotImplementedException();
