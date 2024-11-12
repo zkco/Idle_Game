@@ -5,6 +5,7 @@ public class Character : MonoBehaviour, IAttackable
     public CharacterCondition Condition;
     public CharacterController Controller;
     public int TotalStatus;
+    public int Level;
     private void Awake()
     {
         GameManager.Instance.Character = this;

@@ -19,9 +19,13 @@ public class Condition : MonoBehaviour
         return Mathf.Max(CurValue, 0)/MaxValue;
     }
 
-    public float SetValue(float value)
+    public void SetValue(float value)
     {
         CurValue = value;
-        return CurValue/MaxValue;
     }
+}
+
+public class Exp : Condition
+{
+    
 }
