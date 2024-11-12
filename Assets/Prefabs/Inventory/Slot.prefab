@@ -184,6 +184,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Item: {fileID: 0}
+  EquipText: {fileID: 168494962451046907}
+  EquipIcon: {fileID: 5740459717262020751}
 --- !u!1 &7394499451085897592
 GameObject:
   m_ObjectHideFlags: 0

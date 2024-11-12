@@ -25,6 +25,7 @@ public class Inventory : MonoBehaviour
             }
             SlotByEquipPlace.Add(tag, Slots);
         }
+        ItemManager.Instance.Inventory = this;
     }
 
     public Item GetItem(string tag, string name)
@@ -50,5 +51,10 @@ public class Inventory : MonoBehaviour
         {
             Debug.Log("ÀÎº¥Åä¸®°¡ ²Ë Ã¡½À´Ï´Ù.");
         }
+    }
+
+    public void RemoveItem(Item item)
+    {
+        SlotByEquipPlace[item.Data.EquipSlot.ToString()].First(slot => slot.Item == item).Item = null;
     }
 }
