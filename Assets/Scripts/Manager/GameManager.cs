@@ -5,5 +5,9 @@ using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
-    
+    public Character Character;
+    private void Awake()
+    {
+        Character = FindObjectOfType<Character>();
+    }
 }

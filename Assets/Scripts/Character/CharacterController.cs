@@ -5,16 +5,21 @@ public class CharacterController : MonoBehaviour
     private Rigidbody _rb;
     private Animator _animator;
     public float Speed = 4.0f;
+    public float StartBattleDistance = 3;
+    public bool Battle;
 
     private void Awake()
     {
         _animator = GetComponent<Animator>();
         _rb = GetComponent<Rigidbody>();
     }
-
+    private void Update()
+    {
+        
+    }
     private void FixedUpdate()
     {
-        OnMove();
+        if(Battle == false) OnMove();
     }
 
     public void OnMove()
@@ -23,11 +28,5 @@ public class CharacterController : MonoBehaviour
         _animator.SetBool("isRunning", true);
     }
 
-    public void OnFaceEnemy()
-    {
-        if (_animator.GetBool("isRunning") == true)
-        {
-            _animator.SetBool("isRunning", false);   
-        }
-    }
+
 }

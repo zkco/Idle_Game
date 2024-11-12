@@ -2,6 +2,12 @@ using UnityEngine;
 
 public class Character : MonoBehaviour, IAttackable
 {
+    public CharacterCondition Condition;
+    public CharacterController Controller;
+    private void Awake()
+    {
+        GameManager.Instance.Character = this;
+    }
     public void OnAttack()
     {
         throw new System.NotImplementedException();

@@ -1602,6 +1602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c2fb1f434c00c74ebd7cf4f40acffb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Character: {fileID: 0}
 --- !u!4 &867440032
 Transform:
   m_ObjectHideFlags: 0
@@ -1632,7 +1633,7 @@ MonoBehaviour:
   block: {fileID: 200982471282917918, guid: c530c09054f73d2489e522294d8423f5, type: 3}
   parent: {fileID: 1533877231}
   Party: {fileID: 1080308352}
-  ChunkLevel: 0
+  Stage: 0
   size: 20
 --- !u!114 &867440035
 MonoBehaviour:
@@ -1660,6 +1661,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyPrefabs:
   - {fileID: 6537493377709287581, guid: 62e7504d08c54bf42b3a8fa592812add, type: 3}
+  - {fileID: 4574192825567932450, guid: 88716498407968c4abc511b0e063fb77, type: 3}
+  - {fileID: 474825259339910810, guid: cfdaf9009eaf6284bb2e89504bc24020, type: 3}
   EnemySpawnPosition: {x: 0, y: 0, z: 0}
 --- !u!1001 &918829892
 PrefabInstance:
@@ -4067,6 +4070,7 @@ GameObject:
   - component: {fileID: 6264127136461968823}
   - component: {fileID: 7981733621201683878}
   - component: {fileID: 7981733621201683879}
+  - component: {fileID: 7981733621201683880}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -11325,6 +11329,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 4
+  StartBattleDistance: 3
+--- !u!114 &7981733621201683880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080274784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78ab8daa278c7a14897931393909d6cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8019525400381569575
 PrefabInstance:
   m_ObjectHideFlags: 0
