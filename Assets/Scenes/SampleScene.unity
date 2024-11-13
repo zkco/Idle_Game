@@ -1808,6 +1808,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Inventory: {fileID: 0}
+  Equipment: {fileID: 0}
   itemDatas: []
 --- !u!1 &868774515
 GameObject:
@@ -1902,6 +1903,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EquipSlot: 0
+  Inventory: {fileID: 0}
 --- !u!1001 &918829892
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2285,6 +2287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EquipSlot: 2
+  Inventory: {fileID: 0}
 --- !u!1 &938732798
 GameObject:
   m_ObjectHideFlags: 0
@@ -10564,6 +10567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EquipSlot: 3
+  Inventory: {fileID: 0}
 --- !u!1 &1463272365
 GameObject:
   m_ObjectHideFlags: 0
@@ -10779,6 +10783,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EquipSlot: 1
+  Inventory: {fileID: 0}
 --- !u!1 &1525353709
 GameObject:
   m_ObjectHideFlags: 0
@@ -11439,6 +11444,7 @@ GameObject:
   - component: {fileID: 1783748986}
   - component: {fileID: 1783748985}
   - component: {fileID: 1783748984}
+  - component: {fileID: 1783748987}
   m_Layer: 5
   m_Name: Equipment
   m_TagString: Untagged
@@ -11533,6 +11539,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1783748982}
   m_CullTransparentMesh: 1
+--- !u!114 &1783748987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1783748982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 740243d1d4a831249b5b84b3b75c3c88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1807096431
 PrefabInstance:
   m_ObjectHideFlags: 0

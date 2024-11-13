@@ -7,6 +7,7 @@ public class Character : MonoBehaviour, IEntity
     public Equipment Equipment;
     public int TotalStatus;
     public int Level;
+    public int Gold;
 
     private void Awake()
     {
@@ -16,7 +17,7 @@ public class Character : MonoBehaviour, IEntity
 
     private void Update()
     {
-        
+        TotalStatus = ItemManager.Instance.Equipment.AddStatus();
     }
     public void OnAttack()
     {

@@ -5,8 +5,14 @@ public class EquipmentButton : MonoBehaviour
 {
     public EquipSlot EquipSlot;
     public GameObject Inventory;
+    public Slot slot;
 
     private void Awake()
+    {
+        slot = GetComponentInParent<Slot>();
+    }
+
+    private void Start()
     {
         Inventory = ItemManager.Instance.Inventory.gameObject;
     }

@@ -11,14 +11,18 @@ public class MapManager : Singleton<MapManager>
     public Transform Party;
     private Vector3 _nextChunkPosition;
     public int Stage;
-    public int size;
+    private int _size;
 
 
     private void Awake()
     {
         _nextChunkPosition = new Vector3(0, -1, 0);
         Chunks = new Queue<GameObject>();
-        for (int i = 0; i < size; i++)
+    }
+
+    private void Start()
+    {
+        for (int i = 0; i < _size; i++)
         {
             GameObject obj = Instantiate(block, parent);
             Chunks.Enqueue(obj);

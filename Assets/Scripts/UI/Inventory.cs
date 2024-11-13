@@ -16,17 +16,18 @@ public class Inventory : MonoBehaviour
 
     private void Awake()
     {
+        ItemManager.Instance.Inventory = this;
         InventoryQueue = new Queue<Slot>();
         Slot[] slots = GetComponentsInChildren<Slot>();
         foreach (Slot slot in slots)
         {
             InventoryQueue.Enqueue(slot);
         }
-        ItemManager.Instance.Inventory = this;
     }
 
     private void Start()
     {
+        SetItem(item);
         SetItem(item);
         SetItem(item);
         SetItem(item);
@@ -47,6 +48,10 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// 인벤토리에 item 추가
+    /// </summary>
+    /// <param name="item"></param>
     public void SetItem(Item item)
     {
         if(InventoryQueue.Any(slot => slot.Item == null))
@@ -57,5 +62,14 @@ public class Inventory : MonoBehaviour
         {
             Debug.Log("아이템 가득 참");
         }
+    }
+
+    /// <summary>
+    /// slot.Item = null
+    /// </summary>
+    /// <param name="slot"></param>
+    public void RemoveItem(Slot slot)
+    {
+        slot.Item = null;
     }
 }
