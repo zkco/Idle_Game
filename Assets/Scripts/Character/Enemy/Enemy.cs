@@ -1,9 +1,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour, IAttackable
+public class Enemy : MonoBehaviour, IEntity
 {
     public List<Item> DropTable;
+    public List<GameObject> MonsterPrefabs;
 
     public void OnAttack()
     {

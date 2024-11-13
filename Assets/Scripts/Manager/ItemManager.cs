@@ -5,10 +5,9 @@ public class ItemManager : Singleton<ItemManager>
 {
     public Inventory Inventory;
     public List<ItemData> itemDatas;
-    //public Item MakeItem()
-    //{
-    //    Item item = Instantiate(new GameObject()).AddComponent<Item>();
 
-
-    //}
+    private void Awake()
+    {
+        Inventory = FindObjectOfType<Inventory>();
+    }
 }

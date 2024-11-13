@@ -1,14 +1,17 @@
 using UnityEngine;
 
-public class Character : MonoBehaviour, IAttackable
+public class Character : MonoBehaviour, IEntity
 {
     public CharacterCondition Condition;
     public CharacterController Controller;
+    public Equipment Equipment;
     public int TotalStatus;
     public int Level;
+
     private void Awake()
     {
         GameManager.Instance.Character = this;
+        Controller = GetComponent<CharacterController>();
     }
 
     private void Update()

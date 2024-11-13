@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class CharacterController : MonoBehaviour
@@ -6,7 +7,6 @@ public class CharacterController : MonoBehaviour
     private Animator _animator;
     public float Speed = 4.0f;
     public float StartBattleDistance = 3;
-    public bool Battle;
 
     private void Awake()
     {
@@ -19,7 +19,7 @@ public class CharacterController : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if(Battle == false) OnMove();
+        OnMove();
     }
 
     public void OnMove()
@@ -27,6 +27,4 @@ public class CharacterController : MonoBehaviour
         _rb.velocity = Vector3.forward * Speed;
         _animator.SetBool("isRunning", true);
     }
-
-
 }

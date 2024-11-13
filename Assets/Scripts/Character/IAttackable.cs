@@ -1,8 +1,17 @@
-public interface IAttackable
+public interface IEntity
 {
-    public void OnAttack();
+    public virtual void OnAttack()
+    {
 
-    public void OnDamaged();
+    }
 
-    public void OnDeath();
+    public virtual void OnDamaged()
+    {
+
+    }
+
+    public virtual void OnDeath()
+    {
+
+    }
 }
