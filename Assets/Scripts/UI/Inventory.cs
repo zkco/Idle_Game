@@ -1,18 +1,12 @@
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text.RegularExpressions;
-using Unity.VisualScripting;
-using Unity.VisualScripting.Antlr3.Runtime.Misc;
-using UnityEditor.Search;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
     public Queue<Slot> InventoryQueue;
     public Item item;
-
+    public bool SellMode;
 
     private void Awake()
     {
@@ -23,21 +17,6 @@ public class Inventory : MonoBehaviour
         {
             InventoryQueue.Enqueue(slot);
         }
-    }
-
-    private void Start()
-    {
-        SetItem(item);
-        SetItem(item);
-        SetItem(item);
-        SetItem(item);
-        SetItem(item);
-        SetItem(item);
-        SetItem(item);
-        SetItem(item);
-        SetItem(item);
-        SetItem(item);
-        SetItem(item);
     }
 
     public void ShowInventory()
@@ -54,7 +33,7 @@ public class Inventory : MonoBehaviour
     /// <param name="item"></param>
     public void SetItem(Item item)
     {
-        if(InventoryQueue.Any(slot => slot.Item == null))
+        if (InventoryQueue.Any(slot => slot.Item == null))
         {
             InventoryQueue.First(slot => slot.Item == null).Item = item;
         }
@@ -65,11 +44,12 @@ public class Inventory : MonoBehaviour
     }
 
     /// <summary>
-    /// slot.Item = null
+    /// slot.Item 을 null로 변환
     /// </summary>
     /// <param name="slot"></param>
     public void RemoveItem(Slot slot)
     {
+        GameManager.Instance.Character.Gold += slot.Item.Data.Price;
         slot.Item = null;
     }
 }

@@ -8,11 +8,12 @@ public class Slot : MonoBehaviour
     public TextMeshProUGUI EquipText;
     public Image EquipIcon;
 
-    private void Awake()
+    protected void Awake()
     {
         if (Item == null)
         {
             EquipText.gameObject.SetActive(false);
+            EquipIcon.gameObject.SetActive(false);
         }
         else
         {

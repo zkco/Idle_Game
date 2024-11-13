@@ -4,13 +4,13 @@ using UnityEngine;
 public class CharacterController : MonoBehaviour
 {
     private Rigidbody _rb;
-    private Animator _animator;
+    public Animator Animator;
     public float Speed = 4.0f;
     public float StartBattleDistance = 3;
 
     private void Awake()
     {
-        _animator = GetComponent<Animator>();
+        Animator = GetComponent<Animator>();
         _rb = GetComponent<Rigidbody>();
     }
     private void Update()
@@ -25,6 +25,6 @@ public class CharacterController : MonoBehaviour
     public void OnMove()
     {
         _rb.velocity = Vector3.forward * Speed;
-        _animator.SetBool("isRunning", true);
+        Animator.SetBool("isRunning", true);
     }
 }

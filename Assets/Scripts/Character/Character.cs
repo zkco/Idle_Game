@@ -7,7 +7,7 @@ public class Character : MonoBehaviour, IEntity
     public Equipment Equipment;
     public int TotalStatus;
     public int Level;
-    public int Gold;
+    public int Gold = 0;
 
     private void Awake()
     {
@@ -21,16 +21,16 @@ public class Character : MonoBehaviour, IEntity
     }
     public void OnAttack()
     {
-        throw new System.NotImplementedException();
+
     }
 
     public void OnDamaged()
     {
-        throw new System.NotImplementedException();
+
     }
 
     public void OnDeath()
     {
-        throw new System.NotImplementedException();
+
     }
 }

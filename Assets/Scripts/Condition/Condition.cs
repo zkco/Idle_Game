@@ -7,6 +7,11 @@ public class Condition : MonoBehaviour
     public float CurValue;
     public float MaxValue;
 
+    private void Start()
+    {
+        CurValue = MaxValue;
+    }
+
     public float ReduceValue(float value)
     {
         CurValue -= value;

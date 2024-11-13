@@ -13,4 +13,15 @@ public class CharacterCondition : MonoBehaviour
     {
         Gold.text = $"Gold : {GameManager.Instance.Character.Gold.ToString()}";
     }
+
+    public void AddGold(int gold)
+    {
+        GameManager.Instance.Character.Gold += gold ;
+    }
+
+    public void RemoveGold(int gold)
+    {
+        if(GameManager.Instance.Character.Gold - gold >= 0)
+        GameManager.Instance.Character.Gold -= gold ;
+    }
 }
