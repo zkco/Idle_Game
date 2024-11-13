@@ -7,7 +7,6 @@ using UnityEngine;
 public class GameManager : Singleton<GameManager>
 {
     public Character Character;
-    public event Action StartBattle;
 
     private void Awake()
     {

@@ -15,19 +15,21 @@ public class EnemyManager : MonoBehaviour
 
     private void SpawnMonster()
     {
+        GameObject obj = new GameObject();
         switch (MapManager.Instance.Stage)
         {
             case 0:
-                Instantiate(EnemyPrefabs[0], EnemySpawnPosition + new Vector3(0, 0, 10), Quaternion.FromToRotation(EnemySpawnPosition + new Vector3(0, 0, 10), EnemySpawnPosition));
+                obj = Instantiate(EnemyPrefabs[0], EnemySpawnPosition + new Vector3(0, 0, 10), Quaternion.FromToRotation(EnemySpawnPosition + new Vector3(0, 0, 10), EnemySpawnPosition));
                 break;
             case 1:
-                Instantiate(EnemyPrefabs[1], EnemySpawnPosition + new Vector3(0, 0, 10), Quaternion.FromToRotation(EnemySpawnPosition + new Vector3(0, 0, 10), EnemySpawnPosition));
+                obj = Instantiate(EnemyPrefabs[1], EnemySpawnPosition + new Vector3(0, 0, 10), Quaternion.FromToRotation(EnemySpawnPosition + new Vector3(0, 0, 10), EnemySpawnPosition));
                 break;
             case 2:
-                Instantiate(EnemyPrefabs[2], EnemySpawnPosition + new Vector3(0, 0, 10), Quaternion.FromToRotation(EnemySpawnPosition + new Vector3(0, 0, 10), EnemySpawnPosition));
+                obj = Instantiate(EnemyPrefabs[2], EnemySpawnPosition + new Vector3(0, 0, 10), Quaternion.FromToRotation(EnemySpawnPosition + new Vector3(0, 0, 10), EnemySpawnPosition));
                 break;
         }
-        
+        BattleManager.Instance.Enemy = obj.AddComponent<Enemy>();
+        obj.AddComponent<EnemyController>();
     }
 
     private IEnumerator CoSpawnCheck()

@@ -7,6 +7,7 @@ public class CharacterController : MonoBehaviour
     public Animator Animator;
     public float Speed = 4.0f;
     public float StartBattleDistance = 3;
+    public bool isBattle;
 
     private void Awake()
     {
@@ -15,11 +16,11 @@ public class CharacterController : MonoBehaviour
     }
     private void Update()
     {
-        
+        Debug.Log(Animator.GetCurrentAnimatorStateInfo(0).IsName("RUN00_F_converted"));
     }
     private void FixedUpdate()
     {
-        OnMove();
+        if(isBattle == false) OnMove();
     }
 
     public void OnMove()

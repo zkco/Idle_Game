@@ -46,22 +46,6 @@ public class InventoryButton : MonoBehaviour
                 }
             }
         }
+        ItemManager.Instance.Inventory.SellMode = false;
     }
-
-    //public void UnEquipOther()
-    //{
-    //    Slot[] slots = ItemManager.Instance.Equipment.Slots;
-    //    foreach (Slot slot in InventoryQueue)
-    //    {
-    //        for (int i = 0; i < slots.Length; i++)
-    //        {
-    //            if (slots[i] != slot)
-    //            {
-    //                slot.EquipIcon.gameObject.SetActive(false);
-    //                slot.EquipText.gameObject.SetActive(false);
-    //            }
-    //            else continue;
-    //        }
-    //    }
-    //}
 }

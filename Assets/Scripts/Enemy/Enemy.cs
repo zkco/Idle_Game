@@ -4,20 +4,27 @@ using UnityEngine;
 public class Enemy : MonoBehaviour, IEntity
 {
     public List<Item> DropTable;
-    public List<GameObject> MonsterPrefabs;
+    public Condition EnemyHealth;
+    public EnemyController Controller;
+
+    private void Start()
+    {
+        Controller = GetComponent<EnemyController>();
+    }
 
     public void OnAttack()
     {
-        throw new System.NotImplementedException();
+        GameManager.Instance.Character.Condition.Hp.ReduceValue(Random.Range(10,30));
     }
 
     public void OnDamaged()
     {
-        throw new System.NotImplementedException();
+        EnemyHealth.ReduceValue(GameManager.Instance.Character.TotalStatus);
     }
 
     public void OnDeath()
     {
-        throw new System.NotImplementedException();
+        GameManager.Instance.Character.Condition.AddGold(Random.Range(10, 500));
+        Destroy(this.gameObject);
     }
 }

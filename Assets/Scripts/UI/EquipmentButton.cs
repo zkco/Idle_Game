@@ -5,7 +5,6 @@ public class EquipmentButton : MonoBehaviour
 {
     public GameObject Inventory;
     public Slot slot;
-
     private void Awake()
     {
         slot = GetComponentInParent<Slot>();
