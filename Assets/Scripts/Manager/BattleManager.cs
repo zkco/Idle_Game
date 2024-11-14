@@ -18,7 +18,7 @@ public class BattleManager : Singleton<BattleManager>
         Character.Controller.Animator.SetBool("isRunning", false);
         Character.Controller.isBattle = true;
         StartCoroutine(BattleLogic());
-        while (Enemy.Controller.distanceToPlayer > 10 || Enemy == null || Character == null)
+        while (Enemy.Controller.distanceToPlayer < 10 || Enemy != null || Character != null)
         {
             gameSpeed += Time.deltaTime;
             if (gameSpeed > 15) gameSpeed = 0;
@@ -48,6 +48,7 @@ public class BattleManager : Singleton<BattleManager>
                 Enemy.OnAttack();
                 yield return Enemy.Controller.Animator.GetCurrentAnimatorStateInfo(0).IsName("Attack") == false;
             }
+            yield return null;
         }
         StopCoroutine(BattleLogic());
     }

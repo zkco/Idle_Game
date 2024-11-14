@@ -17,9 +17,9 @@ public class EnemyController : MonoBehaviour
 
     private void Update()
     {
-        if(distanceToPlayer < 5)
+        if (distanceToPlayer < 5 && GameManager.Instance.Character.Controller.isBattle == false)
         {
-            //BattleManager.Instance.StartBattle();
+            BattleManager.Instance.StartBattle();
         }
     }
 

@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour, IEntity
     private void Start()
     {
         Controller = GetComponent<EnemyController>();
+        BattleManager.Instance.Enemy = this;
     }
 
     public void OnAttack()
